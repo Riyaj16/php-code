@@ -1,0 +1,7 @@
+<?php
+$xmlfile = file_get_contents(base_url().'assets/sample-hippo-acord-response.xml');
+    	$ob = simplexml_load_string($xmlfile);
+    	$stringJsonObject = json_encode($ob);
+    	$DecodedStringJsonObject = json_decode($stringJsonObject, true);
+    	$data['response'] = $DecodedStringJsonObject;
+      ?>
